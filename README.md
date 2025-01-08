@@ -54,3 +54,27 @@ extract -> partition -> customize -> routed
 
 제주공룡랜드
 제주넥슨박물관
+
+speeds = Sequence {
+      highway = {
+        motorway        = 70,
+        motorway_link   = 50,
+        trunk           = 50,
+        trunk_link      = 50,
+        primary         = 50,
+        primary_link    = 50,
+        secondary       = 55,
+        secondary_link  = 55,
+        tertiary        = 80,
+        tertiary_link   = 80,
+        unclassified    = 55,
+        residential     = 20,
+        living_street   = 50,
+        service         = 30
+      }
+    },
+
+traffic_light_penalty          = 0,
+u_turn_penalty                 = 15,
+turn_penalty              = 0,
+
