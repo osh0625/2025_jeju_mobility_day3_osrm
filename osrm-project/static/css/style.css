@@ -1,0 +1,114 @@
+body {
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Unbounded', sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    border: none;
+    background-color: #333333;
+    color: white;
+    border-radius: 4px;
+    height: 100%;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.point-text{
+    color: #00CE93;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.search-box-flex{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.search-box-flex p{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#instructions {
+    margin-bottom: 10px;
+    padding: 0.15rem 2rem;
+    background-color: #4d4d4d;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.search-input {
+    width: 300px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 8px 15px;
+    background-color: #00CE93;
+    color: rgb(32, 32, 32);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
+    background-color: #34ffc6;
+    box-shadow: 0 5px 15px rgba(52, 255, 198, 0.4);
+}
+
+#routeInfo {
+    margin-top: 20px;
+    padding: 0.5rem 2rem;
+    background-color: #070707;
+    border-radius: 4px;
+    display: none;
+    color: white;
+}
+
+#routeInfo h3, p{
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    font-family: 'Pretendard', sans-serif;
+}
+
+#routeInfo h3{
+    color: #00CE93;
+}
