@@ -22,7 +22,7 @@ docker run -t -i -p 5000:5000 -v "${PWD}:/data" yeahwonzena/osrm-backend-jeju-cu
 docker create --name temp-container yeahwonzena/osrm-backend-jeju-custom
 
 #2. 컨테이너에서 호스트로 파일 복사
-docker cp temp-container:/opt/car.lua./downloaded-car.lua
+docker cp temp-container:/opt/car.lua ./downloaded-car.lua
 
 #3. 임시 컨테이너 삭제
 docker rm temp-container
