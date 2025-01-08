@@ -26,3 +26,31 @@ docker cp temp-container:/opt/car.lua ./downloaded-car.lua
 
 #3. 임시 컨테이너 삭제
 docker rm temp-container
+
+
+highway (0~100)
+u_turn_penalty (~20)
+traffic_light_penalty (~20)
+turn_penalty (~20)
+surface_speeds (10~80)
+
+
+1. 
+서버 끄기
+
+2. 
+docker run -t -v "${PWD}:/data" yeahwonzena/osrm-backend-jeju-custom osrm-extract -p /data/downloaded-car.lua /data/south-korea-latest.osm.pbf
+
+3. 
+docker run -t -v "${PWD}:/data" yeahwonzena/osrm-backend-jeju-custom osrm-partition /data/south-korea-latest.osrm
+
+4. 
+docker run -t -v "${PWD}:/data" yeahwonzena/osrm-backend-jeju-custom osrm-customize /data/south-korea-latest.osrm
+
+5. 
+docker run -t -i -p 5000:5000 -v "${PWD}:/data" yeahwonzena/osrm-backend-jeju-custom osrm-routed --algorithm mld /data/south-korea-latest.osrm
+
+extract -> partition -> customize -> routed
+
+제주공룡랜드
+제주넥슨박물관
